@@ -1,0 +1,17 @@
+<h1>質問一覧</h1>
+
+<% if @questions.present? %>
+  <h4><%= @questions.count %>件の情報が見つかりました！！</h4>
+    <% @questions.each do |q| %>
+      <h4>
+        <%= q.id %>.
+        タイトル: <%= link_to question_path(q) do %><%= q.title %><% end %>
+        内容: <%= link_to question_path(q) do %><%= q.content.truncate(25, separator: '.') %><% end %>
+        (質問者: <%= q.name %>)
+      </h4>
+    <% end %>
+<% else %>
+  <h4>中身が見つかりませんでした。。</h4>
+<% end %>
+
+<%= link_to '新規作成', new_question_path %>

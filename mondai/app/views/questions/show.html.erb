@@ -1,0 +1,26 @@
+<h1><%= @question.title %></h1>
+  <h4>
+    質問者: <%= @question.name %>さん<br>
+  </h4>
+    <h3><%= @question.content %></h3>
+  <h3>
+    <h2>回答</h2>
+    <%= form_with model: [@question, @question.answers.build] do |f| %>
+      <h5>
+        <%= f.label :name, "名前" %><br>
+        <%= f.text_field :name %>
+      </h5>
+      <h5>
+        <%= f.label :content, "内容" %><br>
+        <%= f.text_area :content %>
+      </h5>
+      <div>
+        <%= f.submit "送信", disable_with: 'Submiting...' %>
+      </div>
+    <% end %>
+  </h3>
+<p>
+  <%= link_to '編集', edit_question_path(@question) %>
+  <%= link_to '戻る',questions_path %>
+  <%= link_to '削除', question_path(@question), data: { turbo_method: 'delete', turbo_confirm: 'Are you sure?' }%>
+</p>
