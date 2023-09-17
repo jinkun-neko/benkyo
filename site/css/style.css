@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+/*========= レイアウトのためのCSS ===============*/
+p{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+/*========= body背景色の変化CSS ===============*/
+body {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  background:linear-gradient(45deg, #62007f,#101748,#877a00);/*グラデーションを定義*/
+  background-size: 200% 200%;/*サイズを大きくひきのばす*/
+  animation: bggradient 10s ease infinite;
+}
+
+@keyframes bggradient{
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/*========= メインビジュアル  ===============*/
+.navbar{
+  line-height: 1.3;
+  width: 102%;
+  overflow: hidden;
+}
+.navbar-brand{
+  color: rgb(255, 255, 255);
+  font-size: 3vw;
+  font-family: 'Oswald', Arial, Helvetica, sans-serif;
+}
+.navbar-brand:hover{
+  color: rgb(255, 246, 72)!important;
+}
+.uchu_title {
+  color: white;
+  font-size: 12vw;
+  font-family: 'Oswald', Arial, Helvetica, sans-serif;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  left: 700px;
+  top: 280px;
+}
+.uchu_message{
+  color: white;
+  font-size: 3vw;
+  justify-content: flex-end;
+  font-family: 'Noto Sans JP', Arial, Helvetica, sans-serif;
+  position: absolute;
+  left: 710px;
+  top: 445px;
+}
+.astro_img{
+  max-width: 100%; /* 画像の幅がコンテナに収まるように */
+  height: auto;
+  position: relative; 
+  top: 50px; 
+  left: 20px;
+}
+.particles-js-canvas-el{
+  width: 100%;
+  height: 92%!important;
+  position: absolute;
+  z-index: 0; /* 必要に応じて、他の要素よりも背面に配置 */
+}
+
+
+/* スマートフォンおよびタブレット用スタイル */
+@media screen and (max-width: 767px) {
+  /* メインビジュアル */
+  .navbar-brand{
+    font-size: 10vw;
+    justify-content: center;
+  }
+  .navbar{
+    line-height: 1.2;
+  }
+  .uchu_title {
+    z-index: 2;
+    font-size: 50px;
+    justify-content: center;
+    position: absolute;
+    left: 130px;
+    top: 160px;
+  }
+  .astro_img {
+    top: 110px;
+  } 
+  .particles-js-canvas-el {
+    height: 90%!important;
+}
+}

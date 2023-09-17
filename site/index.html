@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uchu</title>
+    <!-- Bootstrap CSS 5.0をインクルード -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- 英語ロゴ用googleフォント読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700;800;900&family=Noto+Serif+JP:wght@500;900&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+    <!-- reset.cssをインクルード -->
+    <link rel="stylesheet" href="css/reset.css"> 
+    <!-- カスタムCSSファイルをインクルード（styles.css） -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <!-- ナビゲーションバー -->
+        <nav class="navbar navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="#">Uchu</a>
+            </div>
+        </nav>
+        <div id="particles-js"></div>
+        <!-- メインコンテナ -->
+        <div class="container mt-5">
+            <h1 class="uchu_title">Uchu</h1>
+            <h2 class="uchu_message">まだ見たことない所へ..</h2>
+            <img class="astro_img" src="img/astro.png" alt="" style="height: auto; width: 500px; z-index: 1;">
+        </div>
+    </div>
+    <!-- JavaScript（jQueryを含む）をインクルード -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Bootstrap5.0のjsをインクルード -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- 星の動きを追加するためのjs -->
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- 自作の星の動きを設定しているJavaScriptファイルを読み込む -->
+    <script src="js/star.js"></script>
+    <!-- 独自のJavaScriptファイルを読み込む -->
+    <script src="js/script.js"></script>
+</body>
+</html>
